@@ -9,7 +9,7 @@ const Portfolio = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e: { clientX: any; clientY: any; }) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
@@ -18,9 +18,9 @@ const Portfolio = () => {
 
   // Close modal when pressing Escape key
   useEffect(() => {
-    const handleEscape = (e: { key: string; }) => {
+    const handleEscape = (e: KeyboardEvent): void => {
       if (e.key === 'Escape') {
-        setIsContactModalOpen(false);
+      setIsContactModalOpen(false);
       }
     };
     
@@ -98,7 +98,7 @@ const Portfolio = () => {
     setIsContactModalOpen(false);
   };
 
-  const copyToClipboard = async (text: string, p0: string) => {
+  const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
       // You could add a toast notification here if desired
@@ -188,7 +188,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <button
-                    onClick={() => copyToClipboard('alisameerawad123@gmail.com', 'email')}
+                    onClick={() => copyToClipboard('alisameerawad123@gmail.com')}
                     className="p-2 border border-gray-300 hover:border-black hover:bg-gray-50 transition-colors"
                     title="Copy email"
                   >
@@ -210,7 +210,7 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <button
-                    onClick={() => copyToClipboard('(312) 826-0482', 'phone')}
+                    onClick={() => copyToClipboard('(312) 826-0482')}
                     className="p-2 border border-gray-300 hover:border-black hover:bg-gray-50 transition-colors"
                     title="Copy phone"
                   >
