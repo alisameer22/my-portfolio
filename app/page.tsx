@@ -128,6 +128,7 @@ const Portfolio = () => {
   type BrutalButtonProps = React.PropsWithChildren<{
     variant?: "primary" | "secondary" | "accent";
     className?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
   }>;
 
