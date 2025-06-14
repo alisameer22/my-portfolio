@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code, Database, Globe, Server, Smartphone, ArrowUpRight, Menu, X, Phone } from 'lucide-react';
+import { Mail, ExternalLink, Code, Database, Globe, Server, Smartphone, ArrowUpRight, Menu, X, Phone } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -51,16 +51,14 @@ const Portfolio = () => {
       title: 'IT Infrastructure Simulation',
       description: 'Windows Server VM in Azure simulating real-world help desk tasks like password resets and troubleshooting.',
       tech: ['Azure', 'Windows Server', 'DNS', 'DHCP'],
-      github: '#',
-      live: 'https://alisameer.com',
+
       year: '2024'
     },
     {
       title: 'Help Desk Ticketing System     (in progress)',
       description: 'Full-stack web app for simulating IT support ticket workflows with user/admin login and status tracking.',
       tech: ['Next.js', 'Node.js', 'MongoDB', 'JavaScript'],
-      github: '#',
-      live: 'https://alisameer.com',
+
       year: '2024'
     }
   ];
@@ -337,10 +335,7 @@ const Portfolio = () => {
             <BrutalCard className="p-6 bg-gradient-to-br from-white to-gray-50">
               <div className="relative">
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-black bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400">
-                  <img 
-                    src="/pic.jpg" // Replace with your profile image path
-                    className="w-full h-full object-cover"
-                  />
+        
                 </div>
                 <div className="absolute top-2 right-2 w-12 h-12 bg-black rounded-full flex items-center justify-center">
                   <Code className="text-white" size={20} />
