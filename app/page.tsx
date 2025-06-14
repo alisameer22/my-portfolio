@@ -9,7 +9,7 @@ const Portfolio = () => {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: { clientX: any; clientY: any; }) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
@@ -18,7 +18,7 @@ const Portfolio = () => {
 
   // Close modal when pressing Escape key
   useEffect(() => {
-    const handleEscape = (e) => {
+    const handleEscape = (e: { key: string; }) => {
       if (e.key === 'Escape') {
         setIsContactModalOpen(false);
       }
@@ -84,7 +84,7 @@ const Portfolio = () => {
     }
   ];
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setActiveSection(sectionId);
     setIsMenuOpen(false);
@@ -98,7 +98,7 @@ const Portfolio = () => {
     setIsContactModalOpen(false);
   };
 
-  const copyToClipboard = async (text: string) => {
+  const copyToClipboard = async (text: string, p0: string) => {
     try {
       await navigator.clipboard.writeText(text);
       // You could add a toast notification here if desired
@@ -107,7 +107,13 @@ const Portfolio = () => {
     }
   };
 
-  const BrutalCard = ({ children, className = "", hover = true, ...props }) => (
+  type BrutalCardProps = React.PropsWithChildren<{
+    className?: string;
+    hover?: boolean;
+    [key: string]: any;
+  }>;
+
+  const BrutalCard = ({ children, className = "", hover = true, ...props }: BrutalCardProps) => (
     <div
       className={`bg-white border-2 border-black shadow-[4px_4px_0px_0px_#000] ${
         hover ? 'hover:shadow-[6px_6px_0px_0px_#000] hover:translate-x-[-2px] hover:translate-y-[-2px]' : ''
@@ -118,7 +124,13 @@ const Portfolio = () => {
     </div>
   );
 
-  const BrutalButton = ({ children, variant = "primary", className = "", ...props }) => {
+  type BrutalButtonProps = React.PropsWithChildren<{
+    variant?: "primary" | "secondary" | "accent";
+    className?: string;
+    [key: string]: any;
+  }>;
+
+  const BrutalButton = ({ children, variant = "primary", className = "", ...props }: BrutalButtonProps) => {
     const variants = {
       primary: "bg-black text-white hover:bg-gray-800",
       secondary: "bg-white text-black border-black hover:bg-gray-50",
