@@ -110,6 +110,7 @@ const Portfolio = () => {
   type BrutalCardProps = React.PropsWithChildren<{
     className?: string;
     hover?: boolean;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
   }>;
 
