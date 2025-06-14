@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import { Mail, ExternalLink, Code, Database, Globe, Server, Smartphone, ArrowUpRight, Menu, X, Phone } from 'lucide-react';
+import { Mail, ExternalLink, Code, Menu, X, Phone } from 'lucide-react';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -395,7 +395,7 @@ const Portfolio = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-4">
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <BrutalCard key={skill.name} className="p-4">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="font-semibold text-sm">{skill.name}</h3>
@@ -420,7 +420,7 @@ const Portfolio = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <BrutalCard key={project.title} className="overflow-hidden">
                 <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 flex items-center justify-center border-b-2 border-black">
                   <div className="text-center">
@@ -459,7 +459,7 @@ const Portfolio = () => {
           </div>
 
           <div className="space-y-4">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <BrutalCard key={exp.company} className="p-5">
                 <div className="flex flex-col sm:flex-row sm:items-start gap-3">
                   <div className="bg-black text-white px-2 py-1 text-xs font-bold inline-block">
@@ -485,12 +485,12 @@ const Portfolio = () => {
           
           <p className="text-gray-600 mb-6">
             Interested in IT infrastructure, cybersecurity, or development projects? 
-            Let's connect and discuss opportunities for collaboration.
+            Let&apos;s connect and discuss opportunities for collaboration.
           </p>
           
           <BrutalCard className="p-5 mb-6">
             <div className="flex items-center space-x-3">
-              <Mail size={18} />
+              <Mail size={18}/>
               <span className="font-medium">alisameerawad123@gmail.com</span>
             </div>
           </BrutalCard>
