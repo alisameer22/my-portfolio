@@ -98,7 +98,7 @@ const Portfolio = () => {
     setIsContactModalOpen(false);
   };
 
-  const copyToClipboard = async (text, type) => {
+  const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
       // You could add a toast notification here if desired
@@ -361,7 +361,7 @@ const Portfolio = () => {
           
           <BrutalCard className="p-6 mb-6">
             <p className="text-gray-700 mb-4 leading-relaxed">
-              I'm a Computer Science student at Southern New Hampshire University with hands-on experience 
+              I&apos;m a Computer Science student at Southern New Hampshire University with hands-on experience 
               in Active Directory, Windows Server, and cloud-based lab environments. Currently pursuing 
               CompTIA Security+ and Network+ certifications.
             </p>
@@ -479,7 +479,7 @@ const Portfolio = () => {
         {/* Contact Section - Grid Item */}
         <section id="contact" className="lg:col-span-5">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold mb-3">Let's work together</h2>
+            <h2 className="text-2xl font-bold mb-3">Let&apos;s work together</h2>
             <div className="w-12 h-1 bg-yellow-400 mb-4"></div>
           </div>
           
