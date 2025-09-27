@@ -418,8 +418,10 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
 
-              <a key={project.title} href='http://store313.vercel.app/' target="_blank" rel="noopener noreferrer">
+              
               <BrutalCard key={project.title} href={project.link} className="overflow-hidden">
+                
+                <a key={project.title} href='http://store313.vercel.app/' target="_blank" rel="noopener noreferrer">
                 <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 flex items-center justify-center border-b-2 border-black">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-black rounded-full mx-auto mb-3 flex items-center justify-center">
@@ -443,8 +445,8 @@ const Portfolio = () => {
                   <div className="flex space-x-3">
                     
                   </div>
-                </div>
-              </BrutalCard></a>
+                </div></a>
+              </BrutalCard>
             ))}
           </div>
         </section>
