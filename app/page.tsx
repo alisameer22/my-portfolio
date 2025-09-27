@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Mail, ExternalLink, Code, Menu, X, Phone } from 'lucide-react';
+import { link } from 'fs';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -48,40 +49,23 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'IT Infrastructure Simulation',
-      description: 'Windows Server VM in Azure simulating real-world help desk tasks like password resets and troubleshooting.',
-      tech: ['Azure', 'Windows Server', 'DNS', 'DHCP'],
-
+      title: 'Multi-tenant store with subdomains',
+      description: 'A multi-tenant e-commerce platform allowing users to create their own stores with unique subdomains, manage products, and process payments.',
+      tech: ['NextJs', 'Typescript', 'NodeJs', 'PostgreSQL', 'Prisma', 'TailwindCSS', 'Stripe'],
+      link: 'store313.vercel.app',
       year: '2024'
     },
-    {
-      title: 'Help Desk Ticketing System     (in progress)',
-      description: 'Full-stack web app for simulating IT support ticket workflows with user/admin login and status tracking.',
-      tech: ['Next.js', 'Node.js', 'MongoDB', 'JavaScript'],
-
-      year: '2024'
-    }
+    
   ];
 
   const experiences = [
     {
       company: 'Southern New Hampshire University',
-      position: 'BS Computer Science Student',
-      period: '2024 - 2027',
-      description: 'Pursuing Bachelor of Science in Computer Science with focus on IT infrastructure and cybersecurity.'
+      position: 'Bachelor of Science, Computer Science',
+      period: '2024 - present',
+      description: 'Pursuing Bachelor of Science in Computer Science with focus on Software Development, Data Structures, and Cybersecurity.'
     },
-    {
-      company: 'Self-Directed Learning',
-      position: 'CompTIA Certification Candidate',
-      period: '2024 - Present',
-      description: 'Currently pursuing CompTIA Security+ and Network+ certifications to strengthen cybersecurity knowledge.'
-    },
-    {
-      company: 'Personal Projects',
-      position: 'IT Lab Administrator',
-      period: '2024 - Present',
-      description: 'Building and maintaining home lab environments for hands-on experience with enterprise IT systems.'
-    }
+    
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -326,13 +310,12 @@ const Portfolio = () => {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center relative z-10 mt-16">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              <span className="block">IT Infrastructure</span>
-              <span className="block">& Development</span>
+              <span className="block">Software Engineering</span>
+
             </h1>
             <div className="w-12 h-1 bg-yellow-400 mb-4"></div>
             <p className="text-lg text-gray-600 mb-6">
-              Computer Science student with hands-on experience in Active Directory, Windows Server, 
-              and cloud-based lab environments. Building tools for IT support operations.
+              Computer Science student with hands-on experience Software Engineering, cybersecurity. passionate about building tools to solve real-world problems.
             </p>
             <div className="flex items-center space-x-4">
               <BrutalButton variant="accent" onClick={openContactModal}>Get in touch</BrutalButton>
@@ -435,7 +418,9 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <BrutalCard key={project.title} className="overflow-hidden">
+
+              <a key={project.title} href='http://store313.vercel.app/' target="_blank" rel="noopener noreferrer">
+              <BrutalCard key={project.title} href={project.link} className="overflow-hidden">
                 <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-6 flex items-center justify-center border-b-2 border-black">
                   <div className="text-center">
                     <div className="w-16 h-16 bg-black rounded-full mx-auto mb-3 flex items-center justify-center">
@@ -460,7 +445,7 @@ const Portfolio = () => {
                     
                   </div>
                 </div>
-              </BrutalCard>
+              </BrutalCard></a>
             ))}
           </div>
         </section>
@@ -468,7 +453,7 @@ const Portfolio = () => {
         {/* Experience Section - Grid Item */}
         <section className="lg:col-span-7">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold mb-3">Experience</h2>
+            <h2 className="text-2xl font-bold mb-3">Education</h2>
             <div className="w-12 h-1 bg-yellow-400 mb-4"></div>
           </div>
 
