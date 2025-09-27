@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Mail, ExternalLink, Code, Menu, X, Phone } from 'lucide-react';
-import { link } from 'fs';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
