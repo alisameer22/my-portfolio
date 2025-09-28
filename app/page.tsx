@@ -38,18 +38,18 @@ const Portfolio = () => {
   }, [isContactModalOpen]);
 
   const skills = [
-    { name: 'Python', level: 85 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'PowerShell', level: 75 },
-    { name: 'Active Directory', level: 80 },
-    { name: 'Linux & Git', level: 70 },
-    { name: 'Azure VM & RDP', level: 75 }
+    { name: 'Python', level: 75 },
+    { name: 'JavaScript', level: 75 },
+    { name: 'Typescript', level: 75 },
+    { name: 'Java', level: 75 },
+    { name: 'Linux & Git', level: 75 },
+    { name: 'SQL', level: 75 }
   ];
 
   const projects = [
     {
       title: 'Multi-tenant store with subdomains',
-      description: 'A multi-tenant e-commerce platform allowing users to create their own stores with unique subdomains, manage products, and process payments.',
+      description: 'full-stack web application allowing users to create and manage their own stores. Implemented user authentication, separate admin/customer interfaces, and product management functionality. Used Next.js Middleware to separate user spaces and ensure secure access. Designed responsive UI for both admin and customer sites using Tailwind CSS.',
       tech: ['NextJs', 'Typescript', 'NodeJs', 'PostgreSQL', 'Prisma', 'TailwindCSS', 'Stripe'],
       link: 'store313.vercel.app',
       year: '2024'
@@ -169,11 +169,11 @@ const Portfolio = () => {
                     </div>
                     <div>
                       <div className="text-xs font-medium text-gray-600 mb-1">EMAIL</div>
-                      <div className="font-mono text-sm">alisameerawad123@gmail.com</div>
+                      <div className="font-mono text-sm">alisameerawad1@gmail.com</div>
                     </div>
                   </div>
                   <button
-                    onClick={() => copyToClipboard('alisameerawad123@gmail.com')}
+                    onClick={() => copyToClipboard('alisameerawad1@gmail.com')}
                     className="p-2 border border-gray-300 hover:border-black hover:bg-gray-50 transition-colors"
                     title="Copy email"
                   >
@@ -208,7 +208,7 @@ const Portfolio = () => {
             {/* Action Buttons */}
             <div className="flex space-x-3 mt-6">
               <a
-                href="mailto:alisameerawad123@gmail.com"
+                href="mailto:alisameerawad1@gmail.com"
                 className="flex-1 bg-yellow-400 text-black border-2 border-black px-4 py-3 font-medium text-center hover:bg-yellow-300 hover:shadow-[3px_3px_0px_0px_#000] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all duration-200"
               >
                 SEND EMAIL
@@ -224,7 +224,7 @@ const Portfolio = () => {
             {/* Footer Note */}
             <div className="mt-4 text-center">
               <div className="bg-gray-100 border border-gray-300 px-3 py-2 text-xs text-gray-600">
-                Available for IT & Development Projects
+                Intrested in Software Engineering
               </div>
             </div>
           </BrutalCard>
@@ -357,14 +357,9 @@ const Portfolio = () => {
           
           <BrutalCard className="p-6 mb-6">
             <p className="text-gray-700 mb-4 leading-relaxed">
-              I&apos;m a Computer Science student at Southern New Hampshire University with hands-on experience 
-              in Active Directory, Windows Server, and cloud-based lab environments. Currently pursuing 
-              CompTIA Security+ and Network+ certifications.
+              Computer Science student at Southern New Hampshire University with hands-on experience in full-stack web development, building scalable applications and interactive user interfaces. Proficient in Python, Java, JavaScript, Next.js, and TypeScript, with experience deploying projects such as multi-tenant web applications and dynamic dashboards. Passionate about solving complex problems, learning new technologies, and contributing to impactful software engineering projects.
             </p>
-            <p className="text-gray-600 text-sm">
-              Skilled in full-stack web development with a focus on building tools for IT support operations. 
-              Committed to continuous learning and solving real-world technical issues.
-            </p>
+            
           </BrutalCard>
 
           <div className="grid grid-cols-3 gap-3">
@@ -373,7 +368,7 @@ const Portfolio = () => {
               <div className="text-xs text-gray-600">Graduation</div>
             </BrutalCard>
             <BrutalCard className="p-4 text-center">
-              <div className="text-xl font-bold mb-1">3.3</div>
+              <div className="text-xl font-bold mb-1">3.1</div>
               <div className="text-xs text-gray-600">GPA</div>
             </BrutalCard>
             <BrutalCard className="p-4 text-center">
@@ -392,10 +387,9 @@ const Portfolio = () => {
           
           <div className="grid md:grid-cols-2 gap-4">
             {skills.map((skill) => (
-              <BrutalCard key={skill.name} className="p-4">
+              <BrutalCard key={skill.name} className="p-6">
                 <div className="flex justify-between items-center mb-3">
-                  <h3 className="font-semibold text-sm">{skill.name}</h3>
-                  <span className="text-xs font-mono">{skill.level}%</span>
+                  <h3 className="font-semibold text-sm ">{skill.name}</h3>
                 </div>
                 <div className="w-full bg-gray-200 h-2 border border-gray-300">
                   <div
@@ -484,14 +478,14 @@ const Portfolio = () => {
           </div>
           
           <p className="text-gray-600 mb-6">
-            Interested in IT infrastructure, cybersecurity, or development projects? 
+            Interested in Software Engineering projects? 
             Let&apos;s connect and discuss opportunities for collaboration.
           </p>
           
           <BrutalCard className="p-5 mb-6">
             <div className="flex items-center space-x-3">
               <Mail size={18}/>
-              <span className="font-medium">alisameerawad123@gmail.com</span>
+              <span className="font-medium">alisameerawad1@gmail.com</span>
             </div>
           </BrutalCard>
 
@@ -518,7 +512,7 @@ const Portfolio = () => {
             © 2025 Ali Al Ezairej. Built with Next.js & Tailwind CSS.
           </div>
           <div className="bg-yellow-400 text-black px-3 py-1 text-sm font-bold">
-            PURSUING CERTIFICATIONS
+            IDK WHAT TO PUT HERE
           </div>
         </div>
       </footer>
