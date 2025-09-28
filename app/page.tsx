@@ -422,7 +422,7 @@ const Portfolio = () => {
                       <Code className="text-white" size={20} />
                     </div>
                     <div className="bg-yellow-400 px-2 py-1 border-2 border-black text-xs font-bold">
-                      {project.year}
+                      Click for Demo
                     </div>
                   </div>
                 </div>
