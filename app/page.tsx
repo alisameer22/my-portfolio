@@ -48,7 +48,7 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'Multi-tenant store with subdomains',
+      title: 'Multi-tenant store',
       description: 'full-stack web application allowing users to create and manage their own stores. Implemented user authentication, separate admin/customer interfaces, and product management functionality. Used Next.js Middleware to separate user spaces and ensure secure access. Designed responsive UI for both admin and customer sites using Tailwind CSS.',
       tech: ['NextJs', 'Typescript', 'NodeJs', 'PostgreSQL', 'Prisma', 'TailwindCSS', 'Stripe'],
       link: 'store313.vercel.app',
