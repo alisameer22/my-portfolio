@@ -52,7 +52,7 @@ const Portfolio = () => {
       description: 'full-stack web application allowing users to create and manage their own stores. Implemented user authentication, separate admin/customer interfaces, and product management functionality. Used Next.js Middleware to separate user spaces and ensure secure access. Designed responsive UI for both admin and customer sites using Tailwind CSS.',
       tech: ['NextJs', 'Typescript', 'NodeJs', 'PostgreSQL', 'Prisma', 'TailwindCSS', 'Stripe'],
       link: 'store313.vercel.app',
-      year: '2024'
+      where: 'click for demo'
     },
     
   ];
@@ -422,7 +422,7 @@ const Portfolio = () => {
                       <Code className="text-white" size={20} />
                     </div>
                     <div className="bg-yellow-400 px-2 py-1 border-2 border-black text-xs font-bold">
-                      Click for Demo
+                      {project.where}
                     </div>
                   </div>
                 </div>
